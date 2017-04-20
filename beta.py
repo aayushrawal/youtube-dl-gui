@@ -61,14 +61,14 @@ class windows(Frame):
         for i in range(7):
             mylist.pop(0)
         mylist.pop()
-​
+
         time.sleep(10)
         self.master.destroy()
-​
+
         root=Tk()
         root.geometry("600x400+350+200")
         app=windows(root)
-​
+
         root.mainloop()
 #the subprocess function that inputs quality and downloads the quality
     def download_video_url(self):
@@ -87,7 +87,7 @@ class windows(Frame):
             whole_name='/Users//' + name + '/Downloads/YoutubeDownloads'
         elif platform.system()=="Linux":
             whole_name=name+'/Documents'
-​
+
         self.whole_name=whole_name
         return self.whole_name
 #this function opens download folder and creates if folder is not there
@@ -101,13 +101,13 @@ class windows(Frame):
             subprocess.Popen(["open", newpath])
         else:
             subprocess.Popen(["xdg-open", newpath])
-​
-​
-​
-​
+
+
+
+
 root=Tk()
-​
+
 root.geometry("600x400+350+200")
 app=windows(root)
-​
+
 root.mainloop()
