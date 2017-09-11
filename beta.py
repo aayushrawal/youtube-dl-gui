@@ -11,7 +11,7 @@ class windows(Frame):
         self.master.geometry("500x250+400+300")
 
     def init_window(self):
-        self.master.title("YouTube downloader")
+        self.master.title("YouTube Downloader")
         self.pack(fill=BOTH,expand=1)
         self.list_commands=['youtube-dl']
 
@@ -23,12 +23,12 @@ class windows(Frame):
         download_button.place(x=200,y=200)
 #The text entry field
         self.textob=StringVar()
-        text_field=Entry(self.master,width=42,textvariable=self.textob)
-        text_field.place(x=70,y=15)
+        text_field=Entry(self.master,width=30,textvariable=self.textob)
+        text_field.place(x=75,y=15)
 
 #The text that says enter URL inside tk frame
         texty=Label(text="Enter URL:")
-        texty.place(x=5,y=14)
+        texty.place(x=2,y=14)
 
 #The top left menu
         menu=Menu(self.master)
@@ -45,7 +45,7 @@ class windows(Frame):
         text_field_alternate=Entry(self.master,textvariable=self.textob1)
         text_field_alternate.place(x=90,y=55)
         quality=Label(text="Enter quality:")
-        quality.place(x=7,y=55)
+        quality.place(x=2,y=55)
 #other buttons
         subtitle_button=Button(self,text='Download subtitles',command=self.subtitle)
         subtitle_button.place(x=350,y=55)
@@ -57,13 +57,13 @@ class windows(Frame):
         text_speed=Entry(self.master,textvariable=self.textob2)
         text_speed.place(x=100,y=130)
         text_speed_label=Label(text='Enter speed cap:')
-        text_speed_label.place(x=7,y=130)
+        text_speed_label.place(x=2,y=130)
 
         self.textob3=StringVar()
         text_speed=Entry(self.master,textvariable=self.textob3)
         text_speed.place(x=100,y=160)
         text_speed_label=Label(text='Enter format:')
-        text_speed_label.place(x=7,y=160)
+        text_speed_label.place(x=2,y=160)
 
         speed_button=Button(self,text='Cap speed',command=self.speed)
         speed_button.place(x=350,y=130)
